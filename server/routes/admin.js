@@ -70,7 +70,7 @@ router.get('/dashboard', authMiddleware, async (req, res) => {
   try {
     const locals = {
       title: 'Dashboard',
-      description: 'Simple Blog created with NodeJs, Express & MongoDb.'
+      description: 'Simple Blog.'
     }
 
     const data = await Post.find();
@@ -91,7 +91,7 @@ router.get('/add-post', authMiddleware, async (req, res) => {
   try {
     const locals = {
       title: 'Add Post',
-      description: 'Simple Blog created with NodeJs, Express & MongoDb.'
+      description: 'Simple Blog.'
     }
 
     const data = await Post.find();
@@ -132,7 +132,7 @@ router.get('/edit-post/:id', authMiddleware, async (req, res) => {
 
     const locals = {
       title: "Edit Post",
-      description: "Free NodeJs User Management System",
+      description: "Simple Blog post description",
     };
 
     const data = await Post.findOne({ _id: req.params.id });
